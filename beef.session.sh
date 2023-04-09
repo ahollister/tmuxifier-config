@@ -1,4 +1,4 @@
-session_root "~/Dev/AmericanEagle/BAUER"
+session_root "~/Dev/AmericanEagle/BEEF"
 
 # $1 Project location. Can be relative to session_root or absolute.
 # $2 Extra command for second pane (optional).
@@ -15,16 +15,16 @@ goto_project_and_load_status() {
     select_pane 0
 }
 
-if initialize_session "bauer"; then
+if initialize_session "beef"; then
 
-    new_window "uk-content-gql"
-    goto_project_and_load_status "uk-content-gql"
+    new_window "cook-timer"
+    goto_project_and_load_status "grill-to-perfection"
 
-    new_window "uk-content-ui-templates"
-    goto_project_and_load_status "uk-content-ui-templates"
+    new_window "recipes"
+    goto_project_and_load_status "recipes"
 
-    new_window "uk-content-grazia"
-    goto_project_and_load_status "uk-content-grazia"
+    new_window "beef-app-configuration"
+    goto_project_and_load_status "beef-app-configuration"
 
 fi
 
