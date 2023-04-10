@@ -6,12 +6,6 @@ goto_project_and_load_status() {
     run_cmd "cd $1 && nvim ./"
     split_h 40
     run_cmd "cd $1 && git status"
-    if [ -z "$2" ]
-    then
-        :
-    else
-        run_cmd "$2"
-    fi
     select_pane 0
 }
 
@@ -24,7 +18,7 @@ if initialize_session "dotfiles"; then
     goto_project_and_load_status "tmux"
 
     new_window "tmuxifier"
-    goto_project_and_load_status "~/.tmuxifier/layouts" "git remote -v"
+    goto_project_and_load_status "~/.tmuxifier/layouts"
 
     new_window "zsh"
     goto_project_and_load_status "zsh"
