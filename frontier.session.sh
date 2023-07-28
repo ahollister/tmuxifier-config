@@ -4,6 +4,9 @@ if initialize_session "frontier"; then
 
     new_window "wp"
     run_cmd "nvim ./"
+    split_h 20
+    run_cmd "pwd && git status"
+    select_pane 0
 
 fi
 

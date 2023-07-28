@@ -4,8 +4,8 @@ if initialize_session "playground"; then
 
     new_window "WordPress"
     run_cmd "nvim ./"
-    split_h 40
-    run_cmd "git status"
+    split_h 20
+    run_cmd "pwd"
     select_pane 0 
 
 fi
